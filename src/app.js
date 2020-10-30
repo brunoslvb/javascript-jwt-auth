@@ -1,7 +1,7 @@
 require('dotenv').config({ path: '.env' });
 
-const express   = require('express');
-const morgan    = require('morgan');
+const express = require('express');
+const morgan = require('morgan');
 
 const app = express();
 
@@ -16,5 +16,7 @@ app.use('/', indexRoute);
 app.use('/customers', customerRoute);
 
 app.listen(3333, () => {
-    console.log("Server Started");
+
+  console.log('Server Started');
+
 });
