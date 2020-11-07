@@ -12,14 +12,25 @@ module.exports = {
     migrations: {
       directory: path.resolve(__dirname, 'src', 'database', 'migrations')
     },
-    useNullAsDefault: true,
+    useNullAsDefault: true
+  },
+
+  test: {
+    client: 'sqlite3',
+    connection: {
+      filename: path.resolve(__dirname, 'src', 'database', 'db_test.sqlite')
+    },
+    migrations: {
+      directory: path.resolve(__dirname, 'src', 'database', 'migrations')
+    },
+    useNullAsDefault: true
   },
 
   staging: {
     client: 'postgresql',
     connection: {
       database: 'my_db',
-      user:     'username',
+      user: 'username',
       password: 'password'
     },
     pool: {
@@ -35,7 +46,7 @@ module.exports = {
     client: 'postgresql',
     connection: {
       database: 'my_db',
-      user:     'username',
+      user: 'username',
       password: 'password'
     },
     pool: {
